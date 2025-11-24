@@ -1,0 +1,12 @@
+applications:
+  - name: django-app
+    namespace: default
+    project: default
+    repoURL: "https://github.com/nataliyatraxler/my-microservice-project.git"
+    targetRevision: main
+    chart: "lesson-8-9/charts/django-app"
+
+repositories:
+  - name: my-microservice-project
+    url: "https://github.com/nataliyatraxler/my-microservice-project.git"
+
