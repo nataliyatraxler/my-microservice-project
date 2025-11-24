@@ -1,0 +1,10 @@
+controller:
+  adminUser: "admin"
+  adminPassword: "admin123"
+  installPlugins:
+    - kubernetes:latest
+    - git:latest
+    - workflow-aggregator:latest
+    - job-dsl:latest
+    - configuration-as-code:latest
+
