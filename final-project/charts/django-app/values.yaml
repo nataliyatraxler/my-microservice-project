@@ -1,0 +1,32 @@
+replicaCount: 2
+
+image:
+  repository: "lesson-8-9-django-ecr"
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 8000
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 6
+  targetCPUUtilizationPercentage: 70
+
+configmap:
+  name: django-config
+
+env:
+  DJANGO_SETTINGS_MODULE: "project.settings"
+  DEBUG: "False"
+  ALLOWED_HOSTS: "*"
+
+
+resources: {}
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
